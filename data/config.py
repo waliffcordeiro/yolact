@@ -172,6 +172,15 @@ pascal_sbd_dataset = dataset_base.copy({
     'class_names': PASCAL_CLASSES,
 })
 
+strawberry_diseases_dataset = dataset_base.copy({
+  'name': 'Strawberry Diseases.',
+  'train_info': '/content/train_annotation/dataset.json',
+  'train_images': '/content/train',
+  'valid_info': '/content/valid_annotation/dataset.json',
+  'valid_images': '/content/val',
+  'class_names': ('powdery_mildew_leaf', 'leaf_spot', 'angular_leafspot', 'powdery_mildew_fruit' 'gray_mold', 'anthracnose_fruit_rot', 'blossom_blight'),
+  'label_map': { 0:  1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7 }
+})
 
 
 
@@ -803,6 +812,14 @@ yolact_plus_resnet50_config = yolact_plus_base_config.copy({
         'preapply_sqrt': False,
         'use_square_anchors': False,
     }),
+    
+})
+
+yolact_resnet50_strawberry_config = yolact_plus_resnet50_config.copy({
+    'name': 'yolact_plus_resnet50_strawberry_diseases',
+    'dataset': strawberry_diseases_dataset,
+    'num_classes': len(strawberry_diseases_dataset.class_names) + 1,
+    'max_size': 512,
 })
 
 
@@ -824,3 +841,4 @@ def set_dataset(dataset_name:str):
     """ Sets the dataset of the current config. """
     cfg.dataset = eval(dataset_name)
     
+
