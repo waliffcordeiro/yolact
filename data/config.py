@@ -174,10 +174,10 @@ pascal_sbd_dataset = dataset_base.copy({
 
 strawberry_diseases_dataset = dataset_base.copy({
   'name': 'Strawberry Diseases.',
-  'train_info': '/content/train_annotation/dataset.json',
-  'train_images': '/content/train',
-  'valid_info': '/content/valid_annotation/dataset.json',
-  'valid_images': '/content/val',
+  'train_info': '../train_annotation/dataset.json',
+  'train_images': '../train',
+  'valid_info': '../valid_annotation/dataset.json',
+  'valid_images': '../val',
   'class_names': ('powdery_mildew_leaf', 'leaf_spot', 'angular_leafspot', 'powdery_mildew_fruit' 'gray_mold', 'anthracnose_fruit_rot', 'blossom_blight'),
   'label_map': { 0:  1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7 }
 })
