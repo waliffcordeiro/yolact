@@ -178,7 +178,7 @@ strawberry_diseases_dataset = dataset_base.copy({
   'train_images': '../train',
   'valid_info': '../valid_annotation/dataset.json',
   'valid_images': '../val',
-  'class_names': ('powdery_mildew_leaf', 'leaf_spot', 'angular_leafspot', 'powdery_mildew_fruit' 'gray_mold', 'anthracnose_fruit_rot', 'blossom_blight'),
+  'class_names': ('Powdery Mildew Leaf', 'Leaf Spot', 'Angular Leafspot', 'Powdery Mildew Fruit', 'Gray Mold', 'Anthracnose Fruit Rot', 'Blossom Blight'),
   'label_map': { 0:  1, 1: 2, 2: 3, 3: 4, 4: 5, 5: 6, 6: 7 }
 })
 
