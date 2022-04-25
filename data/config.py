@@ -815,7 +815,7 @@ yolact_plus_resnet50_config = yolact_plus_base_config.copy({
     
 })
 
-yolact_resnet50_strawberry_config = yolact_plus_resnet50_config.copy({
+yolact_plus_resnet50_strawberry_config = yolact_plus_resnet50_config.copy({
     'name': 'yolact_plus_resnet50_strawberry_diseases',
     'dataset': strawberry_diseases_dataset,
     'num_classes': len(strawberry_diseases_dataset.class_names) + 1,
